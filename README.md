@@ -7,7 +7,7 @@ In idle, it shows the garbage, when service `start_vaatwasser` with parameter `r
 ## Hardware
 
 - Espressif ESP32 (WROOM32 / NodeMCU / devkit v1)
-- Wemos 2.4 inch TFT Shield
+- Wemos 2.4 inch TFT Shield (driver: ili9341)
 
 ## Software
 
