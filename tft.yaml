@@ -34,6 +34,18 @@ globals:
     restore_value: no
     initial_value: '-1'
 
+output:
+  - platform: gpio
+    pin: 32
+    id: backlight
+    restore_mode: RESTORE_DEFAULT_ON
+
+switch:
+  - platform: output
+    name: "Kitchen display backlight"
+    output: backlight
+    id: switch_kitchen_display_backlight
+
 api:
   services:
     - service: start_vaatwasser
@@ -49,9 +61,6 @@ api:
             id(vw_run_time) = -1;
             id(vw_ready_time) = -1;
         - display.page.show: afval
-    - service: display_off
-      then:
-        - display.page.show: display_off
     - service: display_afval
       then:
         - display.page.show: afval
