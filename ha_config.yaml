@@ -1,0 +1,37 @@
+# Using the Afvalbeheer sensor component:
+# https://github.com/pippyn/Home-Assistant-Sensor-Afvalbeheer
+
+sensor:
+  - platform: template
+    sensors:
+      omrin_sortibak_days:
+        entity_id: sensor.omrin_sortibak
+        value_template: "{{state_attr('sensor.omrin_sortibak', 'Days-until')}}"
+      omrin_gft_days:
+        entity_id: sensor.omrin_gft
+        value_template: "{{state_attr('sensor.omrin_gft', 'Days-until')}}"
+      omrin_papier_days:
+        entity_id: sensor.omrin_papier
+        value_template: "{{state_attr('sensor.omrin_papier', 'Days-until')}}"
+
+      omrin_sortibak_date:
+        entity_id: sensor.omrin_sortibak
+        value_template: >
+          {% set date = as_timestamp(states('sensor.omrin_sortibak') + '-01:00') %}
+          {% set days = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"] %}
+          {% set day_number = date | timestamp_custom("%w") | int %}
+          {{ days[day_number] }}, {{ as_timestamp(states('sensor.omrin_sortibak') + '-01:00') | timestamp_custom('%-d-%-m-%Y', false) }}
+      omrin_gft_date:
+        entity_id: sensor.omrin_gft
+        value_template: >
+          {% set date = as_timestamp(states('sensor.omrin_gft') + '-01:00') %}
+          {% set days = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"] %}
+          {% set day_number = date | timestamp_custom("%w") | int %}
+          {{ days[day_number] }}, {{ as_timestamp(states('sensor.omrin_gft') + '-01:00') | timestamp_custom('%-d-%-m-%Y', false) }}
+      omrin_papier_date:
+        entity_id: sensor.omrin_papier
+        value_template: >
+          {% set date = as_timestamp(states('sensor.omrin_papier') + '-01:00') %}
+          {% set days = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"] %}
+          {% set day_number = date | timestamp_custom("%w") | int %}
+          {{ days[day_number] }}, {{ as_timestamp(states('sensor.omrin_papier') + '-01:00') | timestamp_custom('%-d-%-m-%Y', false) }}
