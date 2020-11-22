@@ -1,0 +1,251 @@
+#
+# Author: Timo Vos
+#
+esphome:
+  name: ili9341
+  platform: ESP32
+  board: esp32doit-devkit-v1
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  power_save_mode: light
+  manual_ip:
+    static_ip: !secret static_ip
+    gateway: !secret gateway
+    subnet: 255.255.255.0
+
+ota:
+
+logger:
+
+time:
+  - platform: sntp
+    id: sntp_time
+    timezone: Europe/Amsterdam
+
+globals:
+  - id: vw_ready_time
+    type: int
+    restore_value: no
+    initial_value: '-1'
+  - id: vw_run_time
+    type: int
+    restore_value: no
+    initial_value: '-1'
+
+api:
+  services:
+    - service: start_vaatwasser
+      variables:
+        running_time_seconds: int
+      then:
+        - lambda: |-
+            id(vw_run_time) = running_time_seconds;
+        - display.page.show: vaatwasser
+    - service: stop_vaatwasser
+      then:
+        - lambda: |-
+            id(vw_run_time) = -1;
+            id(vw_ready_time) = -1;
+        - display.page.show: afval
+    - service: display_off
+      then:
+        - display.page.show: display_off
+    - service: display_afval
+      then:
+        - display.page.show: afval
+
+
+interval:
+  - interval: 1s
+    then:
+      - if:
+          condition:
+            lambda: |-
+              return id(vw_run_time) > 0;
+          then:
+            - display.page.show: vaatwasser
+            - lambda: |-
+                id(vw_run_time) -= 1;
+            - logger.log:
+                format: "VW run time %.1d"
+                args: [ 'id(vw_run_time)' ]
+
+      - if:
+          condition:
+            lambda: |-
+              return id(vw_run_time) == 0;
+          then:
+            - lambda: |-
+                id(vw_run_time) = -1;
+                id(vw_ready_time) = 20;
+            - display.page.show: vaatwasser_ready
+
+      - if:
+          condition:
+            lambda: |-
+              return id(vw_ready_time) != -1;
+          then:
+            - lambda: |-
+                id(vw_ready_time) -= 1;
+            - logger.log:
+                format: "VW ready time %.1d"
+                args: [ 'id(vw_ready_time)' ]
+
+      - if:
+          condition:
+            lambda: |-
+              return id(vw_ready_time) == 0;
+          then:
+            - lambda: |-
+                id(vw_ready_time) = -1;
+            - display.page.show: afval
+spi:
+  clk_pin: 18
+  mosi_pin: 23
+  miso_pin: 19
+
+sensor:
+  - platform: homeassistant
+    name: "Sortibak dagen"
+    entity_id: sensor.omrin_sortibak_days
+    id: sortibak_days
+    internal: true
+    accuracy_decimals: 0
+  - platform: homeassistant
+    name: "GFT dagen"
+    entity_id: sensor.omrin_gft_days
+    id: gft_days
+    internal: true
+    accuracy_decimals: 0
+  - platform: homeassistant
+    name: "Papier dagen"
+    entity_id: sensor.omrin_papier_days
+    id: papier_days
+    internal: true
+    accuracy_decimals: 0
+
+text_sensor:
+  - platform: homeassistant
+    name: "Sortibak datum"
+    entity_id: sensor.omrin_sortibak_date
+    id: sortibak_date
+    internal: true
+  - platform: homeassistant
+    name: "GFT datum"
+    entity_id: sensor.omrin_gft_date
+    id: gft_date
+    internal: true
+  - platform: homeassistant
+    name: "Papier datum"
+    entity_id: sensor.omrin_papier_date
+    id: papier_date
+    internal: true
+
+font:
+  - file: "fonts/OpenSans-Regular.ttf"
+    id: font_opensans_15
+    size: 15
+  - file: "fonts/OpenSans-Regular.ttf"
+    id: font_opensans_25
+    size: 25
+  - file: "fonts/OpenSans-Regular.ttf"
+    id: font_opensans_30
+    size: 30
+  - file: "fonts/OpenSans-Regular.ttf"
+    id: font_opensans_45
+    size: 45
+  - file: "fonts/OpenSans-Bold.ttf"
+    id: font_opensans_bold_45
+    size: 45
+  - file: "fonts/OpenSans-Bold.ttf"
+    id: font_opensans_bold_60
+    size: 60
+
+image:
+  - file: "images/sorti.png"
+    id: image_sorti
+    resize: 79x79
+    type: RGB24
+  - file: "images/gft.png"
+    id: image_gft
+    resize: 79x79
+    type: RGB24
+  - file: "images/papier.png"
+    id: image_papier
+    resize: 79x79
+    type: RGB24
+
+display:
+  - platform: ili9341
+    id: tft_display
+    model: TFT_2.4
+    cs_pin: 14
+    dc_pin: 27
+    led_pin: 32
+    reset_pin: 33
+    rotation: 270
+    update_interval: 1s
+    pages:
+      - id: afval
+        lambda: |-
+          it.filled_rectangle(0,0,320,240,0x4A8A);
+          it.horizontal_line(2,80,318,COLOR_WHITE);
+          it.horizontal_line(2,160,318,COLOR_WHITE);
+          it.image(0, 0, id(image_sorti));
+          if (id(sortibak_days).state == 0) {
+            it.printf(88, 20, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak vandaag!");
+          } else {
+            if (isnan(id(sortibak_days).state)) {
+              it.printf(88, 5, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: laden...");
+            } else {
+              it.printf(88, 5, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: %i dagen", static_cast<int>(id(sortibak_days).state));
+            }
+            it.printf(88, 45, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(sortibak_date).state.c_str());
+          }
+
+          it.image(0, 81, id(image_gft));
+          if (id(gft_days).state == 0) {
+            it.printf(88, 100, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT vandaag!");
+          } else {
+            if (isnan(id(gft_days).state)) {
+              it.printf(88, 85, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: laden...");
+            } else {
+              it.printf(88, 85, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: %i dagen", static_cast<int>(id(gft_days).state));
+            }
+            it.printf(88, 125, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(gft_date).state.c_str());
+          }
+
+          it.image(0, 161, id(image_papier));
+          if (id(papier_days).state == 0) {
+            it.printf(88, 180, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier vandaag!");
+          } else {
+            if (isnan(id(papier_days).state)) {
+              it.printf(88, 165, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: laden...");
+            } else {
+              it.printf(88, 165, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: %i dagen", static_cast<int>(id(papier_days).state));
+            }
+            it.printf(88, 205, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(papier_date).state.c_str());
+          }
+
+      - id: vaatwasser
+        lambda: |-
+          it.filled_rectangle(0,0,320,240,0x2254);
+          char rtime[10];
+          time_t run_time = id(vw_run_time);
+          strftime(rtime, sizeof(rtime), "%H:%M:%S", gmtime(&run_time));
+          int n = strspn(rtime, "0" );
+          it.printf(it.get_width() / 2, 40, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_CENTER, "De vaatwasser");
+          it.printf(it.get_width() / 2, 70, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_CENTER, "is klaar over:");
+          it.printf(it.get_width() / 2, 110, id(font_opensans_bold_60), COLOR_WHITE, TextAlign::TOP_CENTER, "%s", &rtime[n]);
+
+      - id: vaatwasser_ready
+        lambda: |-
+          it.filled_rectangle(0,0,320,240,0x2254);
+          it.printf(it.get_width() / 2, 60, id(font_opensans_bold_45), COLOR_WHITE, TextAlign::TOP_CENTER, "Vaatwasser");
+          it.printf(it.get_width() / 2, 110, id(font_opensans_bold_45), COLOR_WHITE, TextAlign::TOP_CENTER, "is klaar!");
+
+      - id: display_off
+        lambda: |-
+          it.filled_rectangle(0,0,320,240, COLOR_BLACK);
