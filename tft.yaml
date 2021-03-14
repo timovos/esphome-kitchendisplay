@@ -38,7 +38,6 @@ output:
   - platform: gpio
     pin: 32
     id: backlight
-    restore_mode: RESTORE_DEFAULT_ON
 
 switch:
   - platform: output
@@ -194,50 +193,85 @@ display:
     dc_pin: 27
     led_pin: 32
     reset_pin: 33
-    rotation: 270
+    rotation: 90
     update_interval: 1s
     pages:
       - id: afval
         lambda: |-
+          using namespace std;
+          std::map<int, string> M;
+
+          M = { { id(sortibak_days).state, "sortibak_days" },
+                { id(gft_days).state, "gft_days" },
+                { id(papier_days).state, "papier_days" } };
+
+          int I;
+          I = 0;
+
           it.filled_rectangle(0,0,320,240,0x4A8A);
           it.horizontal_line(2,80,318,COLOR_WHITE);
           it.horizontal_line(2,160,318,COLOR_WHITE);
-          it.image(0, 0, id(image_sorti));
-          if (id(sortibak_days).state == 0) {
-            it.printf(88, 20, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak vandaag!");
-          } else {
-            if (isnan(id(sortibak_days).state)) {
-              it.printf(88, 5, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: laden...");
-            } else {
-              it.printf(88, 5, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: %i dagen", static_cast<int>(id(sortibak_days).state));
-            }
-            it.printf(88, 45, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(sortibak_date).state.c_str());
-          }
 
-          it.image(0, 81, id(image_gft));
-          if (id(gft_days).state == 0) {
-            it.printf(88, 100, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT vandaag!");
-          } else {
-            if (isnan(id(gft_days).state)) {
-              it.printf(88, 85, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: laden...");
+          for (std::map<int, string>::iterator i = M.begin(); i != M.end(); i++) {
+            int base;
+            if (I == 0) {
+              base = 0;
+            } else if (I == 1) {
+              base = 81;
             } else {
-              it.printf(88, 85, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: %i dagen", static_cast<int>(id(gft_days).state));
+              base = 161;
             }
-            it.printf(88, 125, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(gft_date).state.c_str());
-          }
 
-          it.image(0, 161, id(image_papier));
-          if (id(papier_days).state == 0) {
-            it.printf(88, 180, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier vandaag!");
-          } else {
-            if (isnan(id(papier_days).state)) {
-              it.printf(88, 165, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: laden...");
-            } else {
-              it.printf(88, 165, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: %i dagen", static_cast<int>(id(papier_days).state));
+            if (i->second == "sortibak_days") {
+              it.image(0, base, id(image_sorti));
+              if (isnan(id(sortibak_days).state)) {
+                it.printf(88, base + 5, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: laden...");
+              } else {
+                if (id(sortibak_days).state == 0) {
+                  it.printf(88, base + 20, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak vandaag!");
+                } else if (id(sortibak_days).state == 1) {
+                  it.printf(88, base + 20, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak morgen!");
+                } else {
+                  it.printf(88, base + 5, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: %i dagen", static_cast<int>(id(sortibak_days).state));
+                }
+                it.printf(88, base + 45, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(sortibak_date).state.c_str());
+              }
             }
-            it.printf(88, 205, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(papier_date).state.c_str());
-          }
 
+            if (i->second == "gft_days") {
+              it.image(0, base, id(image_gft));
+              if (isnan(id(gft_days).state)) {
+                it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: laden...");
+              } else {
+                if (id(gft_days).state == 0) {
+                  it.printf(88, base + 19, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT vandaag!");
+                } else if (id(gft_days).state == 1) {
+                  it.printf(88, base + 19, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT morgen!");
+                } else {
+                  it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: %i dagen", static_cast<int>(id(gft_days).state));
+                }
+                it.printf(88, base + 44, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(gft_date).state.c_str());
+              }
+            }
+
+            if (i->second == "papier_days") {
+              it.image(0, base, id(image_papier));
+              if (isnan(id(papier_days).state)) {
+                it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: laden...");
+              } else {
+                if (id(papier_days).state == 0) {
+                  it.printf(88, base + 19, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier vandaag!");
+                } else if (id(papier_days).state == 1) {
+                  it.printf(88, base + 19, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier morgen!");
+                } else {
+                  it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: %i dagen", static_cast<int>(id(papier_days).state));
+                }
+                it.printf(88, base + 44, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(papier_date).state.c_str());
+              }
+            }
+
+            I++;
+          }
       - id: vaatwasser
         lambda: |-
           it.filled_rectangle(0,0,320,240,0x2254);
