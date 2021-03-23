@@ -156,6 +156,9 @@ font:
     id: font_opensans_15
     size: 15
   - file: "fonts/OpenSans-Regular.ttf"
+    id: font_opensans_20
+    size: 20
+  - file: "fonts/OpenSans-Regular.ttf"
     id: font_opensans_25
     size: 25
   - file: "fonts/OpenSans-Regular.ttf"
@@ -170,6 +173,13 @@ font:
   - file: "fonts/OpenSans-Bold.ttf"
     id: font_opensans_bold_60
     size: 60
+
+color:
+  - id: COLOR_GREEN
+    red: 0.0000
+    green: 1.0000
+    blue: 0.0000
+    white: 0.0000
 
 image:
   - file: "images/sorti.png"
@@ -225,16 +235,18 @@ display:
             if (i->second == "sortibak_days") {
               it.image(0, base, id(image_sorti));
               if (isnan(id(sortibak_days).state)) {
-                it.printf(88, base + 5, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: laden...");
+                it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: laden...");
               } else {
                 if (id(sortibak_days).state == 0) {
-                  it.printf(88, base + 20, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak vandaag!");
+                  it.printf(88, base + 1, id(font_opensans_30), COLOR_GREEN, TextAlign::TOP_LEFT, "Sortibak vandaag!");
+                  it.printf(88, base + 38, id(font_opensans_20), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 7 uur");
                 } else if (id(sortibak_days).state == 1) {
-                  it.printf(88, base + 20, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak morgen!");
+                  it.printf(88, base + 1, id(font_opensans_30), COLOR_GREEN, TextAlign::TOP_LEFT, "Sortibak morgen!");
+                  it.printf(88, base + 38, id(font_opensans_20), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 7 uur");
                 } else {
-                  it.printf(88, base + 5, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: %i dagen", static_cast<int>(id(sortibak_days).state));
+                  it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: %i dagen", static_cast<int>(id(sortibak_days).state));
+                  it.printf(88, base + 44, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(sortibak_date).state.c_str());
                 }
-                it.printf(88, base + 45, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(sortibak_date).state.c_str());
               }
             }
 
@@ -244,13 +256,15 @@ display:
                 it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: laden...");
               } else {
                 if (id(gft_days).state == 0) {
-                  it.printf(88, base + 19, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT vandaag!");
+                  it.printf(88, base + 1, id(font_opensans_30), COLOR_GREEN, TextAlign::TOP_LEFT, "GFT vandaag!");
+                  it.printf(88, base + 38, id(font_opensans_20), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
                 } else if (id(gft_days).state == 1) {
-                  it.printf(88, base + 19, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT morgen!");
+                  it.printf(88, base + 1, id(font_opensans_30), COLOR_GREEN, TextAlign::TOP_LEFT, "GFT morgen!");
+                  it.printf(88, base + 38, id(font_opensans_20), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
                 } else {
                   it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: %i dagen", static_cast<int>(id(gft_days).state));
+                  it.printf(88, base + 44, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(gft_date).state.c_str());
                 }
-                it.printf(88, base + 44, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(gft_date).state.c_str());
               }
             }
 
@@ -260,13 +274,15 @@ display:
                 it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: laden...");
               } else {
                 if (id(papier_days).state == 0) {
-                  it.printf(88, base + 19, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier vandaag!");
+                  it.printf(88, base + 1, id(font_opensans_30), COLOR_GREEN, TextAlign::TOP_LEFT, "Papier vandaag!");
+                  it.printf(88, base + 38, id(font_opensans_20), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
                 } else if (id(papier_days).state == 1) {
-                  it.printf(88, base + 19, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier morgen!");
+                  it.printf(88, base + 1, id(font_opensans_30), COLOR_GREEN, TextAlign::TOP_LEFT, "Papier morgen!");
+                  it.printf(88, base + 38, id(font_opensans_20), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
                 } else {
                   it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: %i dagen", static_cast<int>(id(papier_days).state));
+                  it.printf(88, base + 44, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(papier_date).state.c_str());
                 }
-                it.printf(88, base + 44, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(papier_date).state.c_str());
               }
             }
 
