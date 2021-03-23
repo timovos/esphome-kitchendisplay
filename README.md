@@ -12,4 +12,4 @@ In idle, it shows the garbage, when service `start_vaatwasser` with parameter `r
 ## Software
 
 - HomeAssistant
-- ESPHome 1.16 (currently dev branch)
+- ESPHome 1.16.2
