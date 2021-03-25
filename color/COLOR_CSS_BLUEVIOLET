@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #8a2be2
+  # 138,43,226
+  - id: COLOR_CSS_BLUEVIOLET
+    red:   0.5412
+    green: 0.1686
+    blue:  0.8863
+    white: 0.0000

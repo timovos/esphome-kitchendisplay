@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #191970
+  # 25,25,112
+  - id: COLOR_CSS_MIDNIGHTBLUE
+    red:   0.0980
+    green: 0.0980
+    blue:  0.4392
+    white: 0.0000

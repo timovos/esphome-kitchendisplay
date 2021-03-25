@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #4b0082
+  # 75,0,130
+  - id: COLOR_CSS_INDIGO
+    red:   0.2941
+    green: 0.0000
+    blue:  0.5098
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #4169e1
+  # 65,105,225
+  - id: COLOR_CSS_ROYALBLUE
+    red:   0.2549
+    green: 0.4118
+    blue:  0.8824
+    white: 0.0000

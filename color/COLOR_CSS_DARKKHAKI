@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #bdb76b
+  # 189,183,107
+  - id: COLOR_CSS_DARKKHAKI
+    red:   0.7412
+    green: 0.7176
+    blue:  0.4196
+    white: 0.0000

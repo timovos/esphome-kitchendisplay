@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #bc8f8f
+  # 188,143,143
+  - id: COLOR_CSS_ROSYBROWN
+    red:   0.7373
+    green: 0.5608
+    blue:  0.5608
+    white: 0.0000

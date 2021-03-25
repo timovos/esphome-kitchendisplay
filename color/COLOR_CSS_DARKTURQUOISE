@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #00ced1
+  # 0,206,209
+  - id: COLOR_CSS_DARKTURQUOISE
+    red:   0.0000
+    green: 0.8078
+    blue:  0.8196
+    white: 0.0000

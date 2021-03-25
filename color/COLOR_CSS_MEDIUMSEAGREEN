@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #3cb371
+  # 60,179,113
+  - id: COLOR_CSS_MEDIUMSEAGREEN
+    red:   0.2353
+    green: 0.7020
+    blue:  0.4431
+    white: 0.0000

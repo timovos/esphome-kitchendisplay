@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ff7f50
+  # 255,127,80
+  - id: COLOR_CSS_CORAL
+    red:   1.0000
+    green: 0.4980
+    blue:  0.3137
+    white: 0.0000

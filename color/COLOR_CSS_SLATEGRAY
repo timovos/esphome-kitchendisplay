@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #708090
+  # 112,128,144
+  - id: COLOR_CSS_SLATEGRAY
+    red:   0.4392
+    green: 0.5020
+    blue:  0.5647
+    white: 0.0000

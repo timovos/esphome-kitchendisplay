@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ffefd5
+  # 255,239,213
+  - id: COLOR_CSS_PAPAYAWHIP
+    red:   1.0000
+    green: 0.9373
+    blue:  0.8353
+    white: 0.0000

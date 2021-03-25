@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #c0c0c0
+  # 192,192,192
+  - id: COLOR_CSS_SILVER
+    red:   0.7529
+    green: 0.7529
+    blue:  0.7529
+    white: 0.0000

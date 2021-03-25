@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #d8bfd8
+  # 216,191,216
+  - id: COLOR_CSS_THISTLE
+    red:   0.8471
+    green: 0.7490
+    blue:  0.8471
+    white: 0.0000

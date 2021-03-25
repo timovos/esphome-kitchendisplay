@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ffb6c1
+  # 255,182,193
+  - id: COLOR_CSS_LIGHTPINK
+    red:   1.0000
+    green: 0.7137
+    blue:  0.7569
+    white: 0.0000

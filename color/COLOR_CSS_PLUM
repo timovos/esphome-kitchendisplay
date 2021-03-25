@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #dda0dd
+  # 221,160,221
+  - id: COLOR_CSS_PLUM
+    red:   0.8667
+    green: 0.6275
+    blue:  0.8667
+    white: 0.0000

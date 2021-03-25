@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #32cd32
+  # 50,205,50
+  - id: COLOR_CSS_LIMEGREEN
+    red:   0.1961
+    green: 0.8039
+    blue:  0.1961
+    white: 0.0000

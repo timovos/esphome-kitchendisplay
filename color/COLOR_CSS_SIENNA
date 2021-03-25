@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #a0522d
+  # 160,82,45
+  - id: COLOR_CSS_SIENNA
+    red:   0.6275
+    green: 0.3216
+    blue:  0.1765
+    white: 0.0000

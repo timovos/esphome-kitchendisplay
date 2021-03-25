@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #008b8b
+  # 0,139,139
+  - id: COLOR_CSS_DARKCYAN
+    red:   0.0000
+    green: 0.5451
+    blue:  0.5451
+    white: 0.0000

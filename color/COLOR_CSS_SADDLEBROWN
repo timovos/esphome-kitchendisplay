@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #8b4513
+  # 139,69,19
+  - id: COLOR_CSS_SADDLEBROWN
+    red:   0.5451
+    green: 0.2706
+    blue:  0.0745
+    white: 0.0000

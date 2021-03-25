@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #7cfc00
+  # 124,252,0
+  - id: COLOR_CSS_LAWNGREEN
+    red:   0.4863
+    green: 0.9882
+    blue:  0.0000
+    white: 0.0000

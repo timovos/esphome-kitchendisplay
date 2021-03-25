@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #6495ed
+  # 100,149,237
+  - id: COLOR_CSS_CORNFLOWERBLUE
+    red:   0.3922
+    green: 0.5843
+    blue:  0.9294
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #48d1cc
+  # 72,209,204
+  - id: COLOR_CSS_MEDIUMTURQUOISE
+    red:   0.2824
+    green: 0.8196
+    blue:  0.8000
+    white: 0.0000

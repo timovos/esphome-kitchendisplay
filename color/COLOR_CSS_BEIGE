@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #f5f5dc
+  # 245,245,220
+  - id: COLOR_CSS_BEIGE
+    red:   0.9608
+    green: 0.9608
+    blue:  0.8627
+    white: 0.0000

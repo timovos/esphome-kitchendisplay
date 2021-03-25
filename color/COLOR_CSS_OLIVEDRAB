@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #6b8e23
+  # 107,142,35
+  - id: COLOR_CSS_OLIVEDRAB
+    red:   0.4196
+    green: 0.5569
+    blue:  0.1373
+    white: 0.0000

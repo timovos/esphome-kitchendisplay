@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #faebd7
+  # 250,235,215
+  - id: COLOR_CSS_ANTIQUEWHITE
+    red:   0.9804
+    green: 0.9216
+    blue:  0.8431
+    white: 0.0000

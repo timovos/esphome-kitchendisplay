@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #add8e6
+  # 173,216,230
+  - id: COLOR_CSS_LIGHTBLUE
+    red:   0.6784
+    green: 0.8471
+    blue:  0.9020
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #8b0000
+  # 139,0,0
+  - id: COLOR_CSS_DARKRED
+    red:   0.5451
+    green: 0.0000
+    blue:  0.0000
+    white: 0.0000

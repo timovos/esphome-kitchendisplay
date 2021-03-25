@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ff1493
+  # 255,20,147
+  - id: COLOR_CSS_DEEPPINK
+    red:   1.0000
+    green: 0.0784
+    blue:  0.5765
+    white: 0.0000

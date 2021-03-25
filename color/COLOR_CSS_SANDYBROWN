@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #f4a460
+  # 244,164,96
+  - id: COLOR_CSS_SANDYBROWN
+    red:   0.9569
+    green: 0.6431
+    blue:  0.3765
+    white: 0.0000

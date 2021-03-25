@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ffa500
+  # 255,165,0
+  - id: COLOR_CSS_ORANGE
+    red:   1.0000
+    green: 0.6471
+    blue:  0.0000
+    white: 0.0000

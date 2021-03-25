@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ffe4e1
+  # 255,228,225
+  - id: COLOR_CSS_MISTYROSE
+    red:   1.0000
+    green: 0.8941
+    blue:  0.8824
+    white: 0.0000

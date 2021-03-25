@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #20b2aa
+  # 32,178,170
+  - id: COLOR_CSS_LIGHTSEAGREEN
+    red:   0.1255
+    green: 0.6980
+    blue:  0.6667
+    white: 0.0000

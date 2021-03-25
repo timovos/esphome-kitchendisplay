@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #000080
+  # 0,0,128
+  - id: COLOR_CSS_NAVY
+    red:   0.0000
+    green: 0.0000
+    blue:  0.5020
+    white: 0.0000

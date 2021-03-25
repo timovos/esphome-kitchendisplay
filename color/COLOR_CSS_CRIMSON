@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #dc143c
+  # 220,20,60
+  - id: COLOR_CSS_CRIMSON
+    red:   0.8627
+    green: 0.0784
+    blue:  0.2353
+    white: 0.0000

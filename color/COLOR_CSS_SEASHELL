@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #fff5ee
+  # 255,245,238
+  - id: COLOR_CSS_SEASHELL
+    red:   1.0000
+    green: 0.9608
+    blue:  0.9333
+    white: 0.0000

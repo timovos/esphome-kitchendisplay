@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #dcdcdc
+  # 220,220,220
+  - id: COLOR_CSS_GAINSBORO
+    red:   0.8627
+    green: 0.8627
+    blue:  0.8627
+    white: 0.0000

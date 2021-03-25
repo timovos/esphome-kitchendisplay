@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ff00ff
+  # 255,0,255
+  - id: COLOR_CSS_FUCHSIA
+    red:   1.0000
+    green: 0.0000
+    blue:  1.0000
+    white: 0.0000

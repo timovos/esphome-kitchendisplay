@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ffe4b5
+  # 255,228,181
+  - id: COLOR_CSS_MOCCASIN
+    red:   1.0000
+    green: 0.8941
+    blue:  0.7098
+    white: 0.0000

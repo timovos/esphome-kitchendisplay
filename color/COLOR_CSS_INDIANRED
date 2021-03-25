@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #cd5c5c
+  # 205,92,92
+  - id: COLOR_CSS_INDIANRED
+    red:   0.8039
+    green: 0.3608
+    blue:  0.3608
+    white: 0.0000

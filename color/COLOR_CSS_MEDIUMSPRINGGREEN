@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #00fa9a
+  # 0,250,154
+  - id: COLOR_CSS_MEDIUMSPRINGGREEN
+    red:   0.0000
+    green: 0.9804
+    blue:  0.6039
+    white: 0.0000

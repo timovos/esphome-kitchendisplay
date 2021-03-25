@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #adff2f
+  # 173,255,47
+  - id: COLOR_CSS_GREENYELLOW
+    red:   0.6784
+    green: 1.0000
+    blue:  0.1843
+    white: 0.0000

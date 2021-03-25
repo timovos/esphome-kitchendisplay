@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #9370db
+  # 147,112,219
+  - id: COLOR_CSS_MEDIUMPURPLE
+    red:   0.5765
+    green: 0.4392
+    blue:  0.8588
+    white: 0.0000

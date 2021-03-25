@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #d2b48c
+  # 210,180,140
+  - id: COLOR_CSS_TAN
+    red:   0.8235
+    green: 0.7059
+    blue:  0.5490
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #778899
+  # 119,136,153
+  - id: COLOR_CSS_LIGHTSLATEGRAY
+    red:   0.4667
+    green: 0.5333
+    blue:  0.6000
+    white: 0.0000

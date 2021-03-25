@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #00ffff
+  # 0,255,255
+  - id: COLOR_CSS_CYAN
+    red:   0.0000
+    green: 1.0000
+    blue:  1.0000
+    white: 0.0000

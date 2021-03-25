@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #f0e68c
+  # 240,230,140
+  - id: COLOR_CSS_KHAKI
+    red:   0.9412
+    green: 0.9020
+    blue:  0.5490
+    white: 0.0000

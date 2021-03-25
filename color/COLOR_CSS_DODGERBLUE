@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #1e90ff
+  # 30,144,255
+  - id: COLOR_CSS_DODGERBLUE
+    red:   0.1176
+    green: 0.5647
+    blue:  1.0000
+    white: 0.0000

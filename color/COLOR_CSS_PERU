@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #cd853f
+  # 205,133,63
+  - id: COLOR_CSS_PERU
+    red:   0.8039
+    green: 0.5216
+    blue:  0.2471
+    white: 0.0000

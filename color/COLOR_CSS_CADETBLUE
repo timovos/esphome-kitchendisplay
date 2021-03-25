@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #5f9ea0
+  # 95,158,160
+  - id: COLOR_CSS_CADETBLUE
+    red:   0.3725
+    green: 0.6196
+    blue:  0.6275
+    white: 0.0000

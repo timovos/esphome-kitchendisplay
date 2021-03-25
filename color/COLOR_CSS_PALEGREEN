@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #98fb98
+  # 152,251,152
+  - id: COLOR_CSS_PALEGREEN
+    red:   0.5961
+    green: 0.9843
+    blue:  0.5961
+    white: 0.0000

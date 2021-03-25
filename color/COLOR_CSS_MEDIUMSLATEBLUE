@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #7b68ee
+  # 123,104,238
+  - id: COLOR_CSS_MEDIUMSLATEBLUE
+    red:   0.4824
+    green: 0.4078
+    blue:  0.9333
+    white: 0.0000

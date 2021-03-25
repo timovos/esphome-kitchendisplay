@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ff6347
+  # 255,99,71
+  - id: COLOR_CSS_TOMATO
+    red:   1.0000
+    green: 0.3882
+    blue:  0.2784
+    white: 0.0000

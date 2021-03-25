@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #fff8dc
+  # 255,248,220
+  - id: COLOR_CSS_CORNSILK
+    red:   1.0000
+    green: 0.9725
+    blue:  0.8627
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #b8860b
+  # 184,134,11
+  - id: COLOR_CSS_DARKGOLDENROD
+    red:   0.7216
+    green: 0.5255
+    blue:  0.0431
+    white: 0.0000

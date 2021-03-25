@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #6a5acd
+  # 106,90,205
+  - id: COLOR_CSS_SLATEBLUE
+    red:   0.4157
+    green: 0.3529
+    blue:  0.8039
+    white: 0.0000

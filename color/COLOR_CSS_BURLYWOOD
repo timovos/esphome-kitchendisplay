@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #deb887
+  # 222,184,135
+  - id: COLOR_CSS_BURLYWOOD
+    red:   0.8706
+    green: 0.7216
+    blue:  0.5294
+    white: 0.0000

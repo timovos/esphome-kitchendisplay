@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #7fffd4
+  # 127,255,212
+  - id: COLOR_CSS_AQUAMARINE
+    red:   0.4980
+    green: 1.0000
+    blue:  0.8314
+    white: 0.0000

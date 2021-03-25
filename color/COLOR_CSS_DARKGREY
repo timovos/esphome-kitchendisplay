@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #a9a9a9
+  # 169,169,169
+  - id: COLOR_CSS_DARKGREY
+    red:   0.6627
+    green: 0.6627
+    blue:  0.6627
+    white: 0.0000

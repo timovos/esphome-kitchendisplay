@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #9932cc
+  # 153,50,204
+  - id: COLOR_CSS_DARKORCHID
+    red:   0.6000
+    green: 0.1961
+    blue:  0.8000
+    white: 0.0000

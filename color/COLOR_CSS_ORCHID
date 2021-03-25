@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #da70d6
+  # 218,112,214
+  - id: COLOR_CSS_ORCHID
+    red:   0.8549
+    green: 0.4392
+    blue:  0.8392
+    white: 0.0000

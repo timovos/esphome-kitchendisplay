@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #40e0d0
+  # 64,224,208
+  - id: COLOR_CSS_TURQUOISE
+    red:   0.2510
+    green: 0.8784
+    blue:  0.8157
+    white: 0.0000

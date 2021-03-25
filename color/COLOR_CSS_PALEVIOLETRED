@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #db7093
+  # 219,112,147
+  - id: COLOR_CSS_PALEVIOLETRED
+    red:   0.8588
+    green: 0.4392
+    blue:  0.5765
+    white: 0.0000

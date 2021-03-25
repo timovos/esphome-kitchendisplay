@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #f5deb3
+  # 245,222,179
+  - id: COLOR_CSS_WHEAT
+    red:   0.9608
+    green: 0.8706
+    blue:  0.7020
+    white: 0.0000

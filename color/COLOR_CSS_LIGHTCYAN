@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #e0ffff
+  # 224,255,255
+  - id: COLOR_CSS_LIGHTCYAN
+    red:   0.8784
+    green: 1.0000
+    blue:  1.0000
+    white: 0.0000

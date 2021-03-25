@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #556b2f
+  # 85,107,47
+  - id: COLOR_CSS_DARKOLIVEGREEN
+    red:   0.3333
+    green: 0.4196
+    blue:  0.1843
+    white: 0.0000

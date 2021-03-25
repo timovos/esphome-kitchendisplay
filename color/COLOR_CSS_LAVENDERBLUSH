@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #fff0f5
+  # 255,240,245
+  - id: COLOR_CSS_LAVENDERBLUSH
+    red:   1.0000
+    green: 0.9412
+    blue:  0.9608
+    white: 0.0000

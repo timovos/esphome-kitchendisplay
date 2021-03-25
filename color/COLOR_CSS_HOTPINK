@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ff69b4
+  # 255,105,180
+  - id: COLOR_CSS_HOTPINK
+    red:   1.0000
+    green: 0.4118
+    blue:  0.7059
+    white: 0.0000

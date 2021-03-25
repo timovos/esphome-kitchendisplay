@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #fffff0
+  # 255,255,240
+  - id: COLOR_CSS_IVORY
+    red:   1.0000
+    green: 1.0000
+    blue:  0.9412
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #a52a2a
+  # 165,42,42
+  - id: COLOR_CSS_BROWN
+    red:   0.6471
+    green: 0.1647
+    blue:  0.1647
+    white: 0.0000

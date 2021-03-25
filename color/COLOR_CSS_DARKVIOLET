@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #9400d3
+  # 148,0,211
+  - id: COLOR_CSS_DARKVIOLET
+    red:   0.5804
+    green: 0.0000
+    blue:  0.8275
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ffdead
+  # 255,222,173
+  - id: COLOR_CSS_NAVAJOWHITE
+    red:   1.0000
+    green: 0.8706
+    blue:  0.6784
+    white: 0.0000

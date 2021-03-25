@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #fdf5e6
+  # 253,245,230
+  - id: COLOR_CSS_OLDLACE
+    red:   0.9922
+    green: 0.9608
+    blue:  0.9020
+    white: 0.0000

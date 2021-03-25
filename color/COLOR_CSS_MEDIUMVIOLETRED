@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #c71585
+  # 199,21,133
+  - id: COLOR_CSS_MEDIUMVIOLETRED
+    red:   0.7804
+    green: 0.0824
+    blue:  0.5216
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #87ceeb
+  # 135,206,235
+  - id: COLOR_CSS_SKYBLUE
+    red:   0.5294
+    green: 0.8078
+    blue:  0.9216
+    white: 0.0000

@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #00bfff
+  # 0,191,255
+  - id: COLOR_CSS_DEEPSKYBLUE
+    red:   0.0000
+    green: 0.7490
+    blue:  1.0000
+    white: 0.0000

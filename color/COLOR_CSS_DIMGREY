@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #696969
+  # 105,105,105
+  - id: COLOR_CSS_DIMGREY
+    red:   0.4118
+    green: 0.4118
+    blue:  0.4118
+    white: 0.0000

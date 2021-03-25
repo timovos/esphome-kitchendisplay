@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ffdab9
+  # 255,218,185
+  - id: COLOR_CSS_PEACHPUFF
+    red:   1.0000
+    green: 0.8549
+    blue:  0.7255
+    white: 0.0000

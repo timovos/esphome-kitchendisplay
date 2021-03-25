@@ -1,0 +1,10 @@
+color:
+  # name and values from https://www.w3.org/wiki/CSS/Properties/color/keywords
+
+  # #ba55d3
+  # 186,85,211
+  - id: COLOR_CSS_MEDIUMORCHID
+    red:   0.7294
+    green: 0.3333
+    blue:  0.8275
+    white: 0.0000
