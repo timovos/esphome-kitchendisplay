@@ -166,8 +166,8 @@ font:
     id: font_opensans_25
     size: 25
   - file: "fonts/OpenSans-Regular.ttf"
-    id: font_opensans_30
-    size: 30
+    id: font_opensans_28
+    size: 28
   - file: "fonts/OpenSans-Regular.ttf"
     id: font_opensans_45
     size: 45
@@ -236,11 +236,11 @@ display:
               } else {
                 if (id(sortibak_days).state == 0) {
                   it.filled_rectangle(80,0,240,80,COLOR_CSS_RED);
-                  it.printf(88, base + 1, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak vandaag!");
+                  it.printf(88, base + 1, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak vandaag!");
                   it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 7 uur");
                 } else if (id(sortibak_days).state == 1) {
                   it.filled_rectangle(80,0,240,80,COLOR_CSS_GREEN);
-                  it.printf(88, base + 1, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak morgen!");
+                  it.printf(88, base + 1, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak morgen!");
                   it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 7 uur");
                 } else {
                   it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Sortibak: %i dagen", static_cast<int>(id(sortibak_days).state));
@@ -256,11 +256,11 @@ display:
               } else {
                 if (id(gft_days).state == 0) {
                   it.filled_rectangle(80,0,240,80,COLOR_CSS_RED);
-                  it.printf(88, base + 1, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT vandaag!");
+                  it.printf(88, base + 1, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT vandaag!");
                   it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
                 } else if (id(gft_days).state == 1) {
                   it.filled_rectangle(80,0,240,80,COLOR_CSS_GREEN);
-                  it.printf(88, base + 1, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT morgen!");
+                  it.printf(88, base + 1, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT morgen!");
                   it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
                 } else {
                   it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: %i dagen", static_cast<int>(id(gft_days).state));
@@ -276,11 +276,11 @@ display:
               } else {
                 if (id(papier_days).state == 0) {
                   it.filled_rectangle(80,0,240,80,COLOR_CSS_RED);
-                  it.printf(88, base + 1, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier vandaag!");
+                  it.printf(88, base + 1, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier vandaag!");
                   it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
                 } else if (id(papier_days).state == 1) {
                   it.filled_rectangle(80,0,240,80,COLOR_CSS_GREEN);
-                  it.printf(88, base + 1, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier morgen!");
+                  it.printf(88, base + 1, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier morgen!");
                   it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
                 } else {
                   it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "Papier: %i dagen", static_cast<int>(id(papier_days).state));
@@ -298,8 +298,8 @@ display:
           time_t run_time = id(vw_run_time);
           strftime(rtime, sizeof(rtime), "%H:%M:%S", gmtime(&run_time));
           int n = strspn(rtime, "0" );
-          it.printf(it.get_width() / 2, 40, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_CENTER, "De vaatwasser");
-          it.printf(it.get_width() / 2, 70, id(font_opensans_30), COLOR_WHITE, TextAlign::TOP_CENTER, "is klaar over:");
+          it.printf(it.get_width() / 2, 40, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_CENTER, "De vaatwasser");
+          it.printf(it.get_width() / 2, 70, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_CENTER, "is klaar over:");
           it.printf(it.get_width() / 2, 110, id(font_opensans_bold_60), COLOR_WHITE, TextAlign::TOP_CENTER, "%s", &rtime[n]);
 
       - id: vaatwasser_ready
