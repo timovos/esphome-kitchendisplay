@@ -13,3 +13,7 @@ In idle, it shows the garbage, when service `start_vaatwasser` with parameter `r
 
 - HomeAssistant
 - ESPHome 1.16.2
+
+## Credits
+
+- The colors-folder is taken from: https://gitlab.com/wjcarpenter/esphome-colors
