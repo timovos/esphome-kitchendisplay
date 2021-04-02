@@ -257,11 +257,11 @@ display:
                 if (id(gft_days).state == 0) {
                   it.filled_rectangle(80,0,240,80,COLOR_CSS_RED);
                   it.printf(88, base + 1, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT vandaag!");
-                  it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
+                  it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 7 uur");
                 } else if (id(gft_days).state == 1) {
                   it.filled_rectangle(80,0,240,80,COLOR_CSS_GREEN);
                   it.printf(88, base + 1, id(font_opensans_28), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT morgen!");
-                  it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 17:00 uur");
+                  it.printf(88, base + 38, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "voor 7 uur");
                 } else {
                   it.printf(88, base + 4, id(font_opensans_25), COLOR_WHITE, TextAlign::TOP_LEFT, "GFT: %i dagen", static_cast<int>(id(gft_days).state));
                   it.printf(88, base + 44, id(font_opensans_15), COLOR_WHITE, TextAlign::TOP_LEFT, "%s", id(gft_date).state.c_str());
